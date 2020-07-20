@@ -1,11 +1,9 @@
-import requests
-from stores.py import *
-
-
+from stores import store1
+from stores import store2
 # Add ability to search Kroger for items
 
 
-print(stores)
+print(store1)
 
 
 grocery_list = []
