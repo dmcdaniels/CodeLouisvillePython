@@ -5,7 +5,6 @@ store1 = {
      'bacon': '$4.99',
 }
 
-
 store2 = [
      {'id': 0,
      'item': 'Milk',
