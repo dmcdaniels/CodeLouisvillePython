@@ -14,24 +14,35 @@ def grocery_add(item):
     print("The list now has {} items".format(len(grocery_list)))
 
 #Add instructions
+#make this a function
 
+#While loop to add grocery items, with their cost to the list until finished.
 
-#While loop to add grocery items to the list until finished.
 while True:
-    new_item =input("> ")
-    if new_item == "DONE":
+    new_item =input("> ").lower()
+    store_item = store1.get(new_item)
+    print (store_item)
+    if new_item == "done":
         break
     grocery_add(new_item)
 
 
 #Printed out grocery list
 print("Grocery List:")
-for food_item in grocery_list:
-    print(food_item)
+for food_item, value in store1.items():
+    print(food_item, ':', value)
+
+values = food_item.value()
+
+total = sum(values)
+print(total)
+
 
 
 #Create a function that adds the total of all items together. 
+#total = 0
+#for total_cost in new_item:
+#    total = total + new_item(total_cost)
 
 
-#Possibilities:
-#Add second API to search through to compare prices.
+
