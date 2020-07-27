@@ -6,6 +6,9 @@ from stores import store2
 def inventory():
     print ("These are the items we have available in our store:   ")
 
+def outofstock():
+    print ("Oh sorry. It looks like we are currently out of the item you are looking for. Would you like to purchase something else instead?  ")
+
 print("Hello and welcome to our online shopping store. For our inventory please type 'inventory', when you are finished shopping type 'done'. To add an item to the cart, just enter the name of the item")
 
 # Start with an empty grocery list.
@@ -25,6 +28,10 @@ while True:
         inventory()
         for item, cost in store1.items():
             print(item, ':', cost)
+        continue
+    #Fix if not in stock.
+    if store1() is bool(None):
+        outofstock()
         continue
     elif new_item == "done":
         break
