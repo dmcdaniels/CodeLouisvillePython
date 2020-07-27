@@ -35,11 +35,11 @@ while True:
     grocery_add(new_item, store_cost)
 
 #Print out grocery list
-print (grocery_list)
+print ("Your grocery list is", *grocery_list, sep = "\n")
 
 #Create a function that adds the total of all items together. 
 total_cost = 0
 
 for grocery_item in grocery_list:
     total_cost = total_cost + grocery_item[1]
-print (total_cost)
+print ("The total cost of your groceries today is:   ", total_cost)
