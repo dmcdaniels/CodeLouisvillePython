@@ -29,12 +29,13 @@ while True:
         for item, cost in store1.items():
             print(item, ':', cost)
         continue
-    #Fix if not in stock.
-    if store1() is bool(None):
-        outofstock()
-        continue
     elif new_item == "done":
         break
+    #Fix if not in stock.
+    if new_item not in store1:
+        outofstock()
+        continue
+    
     print (store_cost)
     grocery_add(new_item, store_cost)
 
